@@ -17,12 +17,12 @@ for article in articles:
 sorted_clusters = sorted(articles_by_cluster.keys())
 
 # Create a Streamlit app
-st.title('Articles by Cluster')
+st.title('Deng News Clustering Technique')
 
 # Display articles by cluster
 for cluster in sorted_clusters:
     cluster_articles = articles_by_cluster[cluster]
     st.header(f'Cluster {cluster}')
     for article in cluster_articles:
-        st.subheader(f"[{article['title']}]({article['url']})")
-        st.write(article['content'])
+        st.subheader(f"[{article['headline']}]({article['article_link']})")
+        st.write(article['is_sarcastic'])
